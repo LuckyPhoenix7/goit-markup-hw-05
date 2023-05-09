@@ -12,13 +12,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Header -->
@@ -30,7 +31,9 @@
           >
           <ul class="header-nav list">
             <li>
-              <a class="header-nav-link link" href="./index.html">Studio</a>
+              <a class="header-nav-link active link" href="./index.html"
+                >Studio</a
+              >
             </li>
             <li>
               <a class="header-nav-link link" href="./portfolio.html"
@@ -64,7 +67,9 @@
       <section class="hero-bg hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="hero-button" type="button">Order Service</button>
+          <button class="hero-button" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <!-- About section -->
@@ -429,5 +434,16 @@
         </div>
       </div>
     </footer>
+    <!-- Modal window -->
+    <div class="overlay is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close" type="button" data-modal-close>
+          <svg class="modal-close-icon" width="8" height="8">
+            <use href="./images/icons.svg#close-icon"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
